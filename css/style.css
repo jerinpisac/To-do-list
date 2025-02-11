@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.main-body{
+    width: 500px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    /* color: white;    j */
+}
+
+.addlist{
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 30px;
+    background: white;
+}
+
+input{
+    width: 70%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 20px;
+}
+
+#add{
+    width: 30%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    position: relative;
+    z-index: 0;
+}
+
+#add::after{
+    content: '';
+    width: 0%;
+    height: 0%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: -1;
+    background: white;
+    border-radius: 30px;
+    transition: 300ms ease-in-out;
+}
+
+#add:hover::after{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#add:hover{
+    color: black;
+}
+
+ul li{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img{
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.img1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.list{
+    cursor: pointer;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+ul li.checked .list{
+    text-decoration: line-through;
+}
+
+ul li.unchecked .list{
+    text-decoration: none;
+}
+
+.remove{
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 50%;
+    background: black;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    color: white;
+}
+
+.remove{
+    position: absolute;
+    right: 0px;
+}
+
+.remove::after{
+    content: '';
+    width: 0%;
+    height: 0%;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transition: 300ms ease-in-out;
+}
+
+.remove:hover::after{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.remove:hover{
+    color: black;
+}
